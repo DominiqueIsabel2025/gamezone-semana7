@@ -1,0 +1,236 @@
+/* ================================
+   GAMEZONE - ESTILOS PRINCIPALES
+   ================================ */
+
+#root {
+  width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================================
+   ENCABEZADO
+   ================================ */
+
+.header {
+  background-color: #111827;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+/* ================================
+   GRILLA DE PRODUCTOS
+   ================================ */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ================================
+   TARJETA DE PRODUCTO
+   ================================ */
+
+.product-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.product-card p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.product-card p:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* ================================
+   PRECIOS
+   ================================ */
+
+.price-normal {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.price-offer {
+  color: #dc2626;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ================================
+   BOTÓN
+   ================================ */
+
+.product-card button {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-card button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    padding: 25px 15px;
+  }
+}
+
+/* ================================
+   CARRITO DE COMPRAS
+   ================================ */
+
+.shopping-cart {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shopping-cart h2 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 1.8rem;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.cart-item h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.cart-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.cart-item button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc2626;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #b91c1c;
+}
+
+.cart-total {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+  text-align: right;
+}
+
+.cart-total h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #111827;
+}
