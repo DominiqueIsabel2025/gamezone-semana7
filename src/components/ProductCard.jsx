@@ -1,7 +1,15 @@
-function ProductCard({ producto, onAgregar }) {
+function ProductCard({ producto, carrito, onAgregar }) {
+
+  // Comprueba si el producto ya se encuentra en el carrito
+  const enCarrito = carrito.some(
+    (item) => item.id === producto.id
+  )
+
   // Muestra la información del producto y permite agregarlo al carrito
   return (
+
     <article className="product-card">
+
       <img
         src={producto.imagen}
         alt={producto.nombre}
@@ -20,10 +28,14 @@ function ProductCard({ producto, onAgregar }) {
         Oferta: ${producto.precioOferta.toLocaleString('es-CL')}
       </p>
 
-      {/* Ejecuta la función recibida desde App cuando se presiona el botón */}
-      <button onClick={() => onAgregar(producto)}>
-        Agregar al carrito
+      {/* El botón cambia según si el producto ya está en el carrito */}
+      <button
+        onClick={() => onAgregar(producto)}
+        disabled={enCarrito}
+      >
+        {enCarrito ? '✓ En el carrito' : 'Agregar al carrito'}
       </button>
+
     </article>
   )
 }

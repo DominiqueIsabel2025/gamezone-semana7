@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "PlayStation 5",
+    "categoria": "Videojuegos",
+    "precioNormal": 599990,
+    "precioOferta": 549990,
+    "descripcion": "Consola de nueva generación de Sony con gran rendimiento y gráficos.",
+    "imagen": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db"
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox Series X",
+    "categoria": "Videojuegos",
+    "precioNormal": 549990,
+    "precioOferta": 499990,
+    "descripcion": "Consola de alto rendimiento de Microsoft para una experiencia gamer.",
+    "imagen": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+  },
+  {
+    "id": 3,
+    "nombre": "Nintendo Switch",
+    "categoria": "Videojuegos",
+    "precioNormal": 369990,
+    "precioOferta": 329990,
+    "descripcion": "Consola híbrida que permite jugar tanto en casa como en modo portátil.",
+    "imagen": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e"
+  },
+  {
+    "id": 4,
+    "nombre": "Control Inalámbrico",
+    "categoria": "Accesorios",
+    "precioNormal": 79990,
+    "precioOferta": 69990,
+    "descripcion": "Control inalámbrico diseñado para disfrutar tus videojuegos con comodidad.",
+    "imagen": "https://images.unsplash.com/photo-1605901309584-818e25960a8f"
+  },
+  {
+    "id": 5,
+    "nombre": "Audífonos Gamer",
+    "categoria": "Accesorios",
+    "precioNormal": 69990,
+    "precioOferta": 59990,
+    "descripcion": "Audífonos gamer con sonido envolvente para una experiencia más inmersiva.",
+    "imagen": "https://images.unsplash.com/photo-1599669454699-248893623440"
+  },
+  {
+    "id": 6,
+    "nombre": "Teclado Gamer RGB",
+    "categoria": "Accesorios",
+    "precioNormal": 59990,
+    "precioOferta": 49990,
+    "descripcion": "Teclado gamer con iluminación RGB para complementar tu estación de juego.",
+    "imagen": "https://images.unsplash.com/photo-1541140532154-b024d705b90a"
+  },
+  {
+    "id": 7,
+    "nombre": "Mouse Gamer",
+    "categoria": "Accesorios",
+    "precioNormal": 39990,
+    "precioOferta": 29990,
+    "descripcion": "Mouse gamer preciso y cómodo para mejorar el control durante tus partidas.",
+    "imagen": "https://images.unsplash.com/photo-1527814050087-3793815479db"
+  },
+  {
+    "id": 8,
+    "nombre": "God of War Ragnarök",
+    "categoria": "Videojuegos",
+    "precioNormal": 69990,
+    "precioOferta": 59990,
+    "descripcion": "Aventura de acción ambientada en la mitología nórdica.",
+    "imagen": "https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf"
+  }
+]  
