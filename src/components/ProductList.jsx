@@ -2,14 +2,17 @@ import ProductCard from './ProductCard'
 
 function ProductList({ productos, carrito, onAgregar }) {
 
-  // Recorre la lista de productos y crea una tarjeta para cada uno
   return (
+    <section className="container py-4" aria-labelledby="titulo-productos">
 
-    <section className="product-list">
+      <h2
+        id="titulo-productos"
+        className="text-center mb-4"
+      >
+        Productos
+      </h2>
 
-      <h2>Productos</h2>
-
-      <div className="products-grid">
+      <div className="row g-4">
 
         {productos.map((producto) => (
 

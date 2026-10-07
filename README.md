@@ -1,49 +1,99 @@
-# 🎮 GameZone — Semana 8
+# 🎮 GameZone - EFT Frontend I
 
-Proyecto eCommerce desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)**.
+Proyecto eCommerce desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de Duoc UC.
 
-La actividad consiste en continuar el eCommerce de semanas anteriores utilizando **React**, componentes funcionales, `useState`, `useEffect`, props y renderizado condicional.
+Este proyecto corresponde a la Evaluación Final Transversal (EFT) y consiste en el desarrollo de una tienda online de videojuegos y accesorios utilizando HTML5, CSS3, JavaScript, Bootstrap 5 y React.
+
+## 📌 Descripción
+
+GameZone es una tienda online que permite visualizar productos de videojuegos y accesorios, filtrarlos por categoría, agregarlos a un carrito de compras y enviar consultas mediante un formulario de contacto con validación.
+
+El proyecto utiliza componentes React reutilizables, manejo de estado mediante `useState`, efectos mediante `useEffect`, props y carga dinámica de productos desde un archivo JSON.
 
 ## 🛠️ Tecnologías utilizadas
 
+- HTML5
+- CSS3
+- JavaScript
 - React
 - Vite
-- JavaScript
-- CSS
+- Bootstrap 5
 - Git
 - GitHub
 - GitHub Pages
 
-## ⚛️ Funcionalidades implementadas
+## ✨ Funcionalidades
 
-- Catálogo de productos cargado dinámicamente mediante `useEffect` y `fetch`.
-- Productos almacenados en un archivo `productos.json`.
-- Estado del catálogo mediante `useState`.
-- Carrito de compras mediante `useState`.
+### 🛍️ Catálogo de productos
+
+- Carga dinámica de productos mediante `fetch`.
+- Productos almacenados en `public/data/productos.json`.
+- Visualización de:
+  - Nombre
+  - Imagen
+  - Descripción
+  - Precio normal
+  - Precio de oferta
+- Tarjetas desarrolladas utilizando componentes de Bootstrap 5.
+
+### 🔎 Filtro por categoría
+
+El catálogo permite filtrar los productos mediante las siguientes categorías:
+
+- Todos
+- Videojuegos
+- Accesorios
+
+El filtro se implementa mediante `useState` y actualiza dinámicamente la lista de productos.
+
+### 🛒 Carrito de compras
+
 - Agregar productos al carrito.
-- Eliminar productos del carrito.
-- Contador de productos en el carrito.
-- Cálculo del total de la compra.
-- Renderizado condicional del carrito.
-- Cambio del botón entre **"Agregar al carrito"** y **"✓ En el carrito"** según el estado.
-- Mensaje cuando el carrito está vacío.
-- Componentes funcionales y reutilizables.
+- Evitar agregar nuevamente un producto que ya se encuentra en el carrito.
+- Mostrar cantidad de productos.
+- Eliminar productos.
+- Calcular el total de la compra.
+- Mostrar un mensaje cuando el carrito está vacío.
 
-## 📁 Estructura del proyecto
+### 📩 Formulario de contacto
+
+El formulario incluye:
+
+- Nombre.
+- Correo electrónico.
+- Mensaje.
+- Validación de campos obligatorios.
+- Validación del formato del correo electrónico.
+- Mensajes de error.
+- Mensaje de confirmación cuando el formulario se completa correctamente.
+
+### 📱 Diseño responsive
+
+El sitio está optimizado para diferentes tamaños de pantalla:
+
+- 📱 Móvil: 1 producto por fila.
+- 📲 Tablet: 2 productos por fila.
+- 💻 Escritorio: 4 productos por fila.
+
+También se utiliza el Navbar responsive de Bootstrap 5 con menú hamburguesa para dispositivos pequeños.
+
+## ⚛️ React
+
+El proyecto está organizado mediante componentes funcionales reutilizables.
+
+### Componentes principales
 
 ```text
 src/
 ├── components/
+│   ├── Navbar.jsx
 │   ├── ProductCard.jsx
 │   ├── ProductList.jsx
 │   ├── ShoppingCart.jsx
-│   └── CartTotal.jsx
-├── data/
-│   └── productos.js
+│   ├── CartTotal.jsx
+│   └── ContactForm.jsx
+│
 ├── App.jsx
 ├── App.css
-└── index.css
-
-public/
-└── data/
-    └── productos.json
+├── index.css
+└── main.jsx

@@ -5,36 +5,55 @@ function ProductCard({ producto, carrito, onAgregar }) {
     (item) => item.id === producto.id
   )
 
-  // Muestra la información del producto y permite agregarlo al carrito
   return (
+    <article className="col-12 col-md-6 col-lg-3">
 
-    <article className="product-card">
+      <div className="card h-100 shadow-sm">
 
-      <img
-        src={producto.imagen}
-        alt={producto.nombre}
-        className="product-image"
-      />
+        <img
+          src={producto.imagen}
+          alt={producto.nombre}
+          className="card-img-top product-image"
+        />
 
-      <h2>{producto.nombre}</h2>
+        <div className="card-body d-flex flex-column">
 
-      <p>{producto.descripcion}</p>
+          <h2 className="card-title h5">
+            {producto.nombre}
+          </h2>
 
-      <p className="price-normal">
-        Precio normal: ${producto.precioNormal.toLocaleString('es-CL')}
-      </p>
+          <p className="card-text">
+            {producto.descripcion}
+          </p>
 
-      <p className="price-offer">
-        Oferta: ${producto.precioOferta.toLocaleString('es-CL')}
-      </p>
+          <p className="text-muted text-decoration-line-through mb-1">
+            Precio normal: $
+            {producto.precioNormal.toLocaleString('es-CL')}
+          </p>
 
-      {/* El botón cambia según si el producto ya está en el carrito */}
-      <button
-        onClick={() => onAgregar(producto)}
-        disabled={enCarrito}
-      >
-        {enCarrito ? '✓ En el carrito' : 'Agregar al carrito'}
-      </button>
+          <p className="text-danger fw-bold fs-5">
+            Oferta: $
+            {producto.precioOferta.toLocaleString('es-CL')}
+          </p>
+
+          <button
+            type="button"
+            className={`btn mt-auto ${
+              enCarrito
+                ? 'btn-success'
+                : 'btn-primary'
+            }`}
+            onClick={() => onAgregar(producto)}
+            disabled={enCarrito}
+          >
+            {enCarrito
+              ? '✓ En el carrito'
+              : 'Agregar al carrito'}
+          </button>
+
+        </div>
+
+      </div>
 
     </article>
   )
